@@ -11,54 +11,72 @@
 </head>
 	<body>
 		
-		<div class="main-container">		
-			<div class='header'>
-			 	
-	<!-- 		 	<img src="assets/images/millionare_logo.png" id="logo"> -->
-				<img src="assets/images/5050.png" class="help" id="5050">
-				<img src="assets/images/friend.png"  class="help" id="friend">
-				<img src="assets/images/audience.png" class="help" id="audience">
+		<div class="main-container">	
+			<div class='left-container'>	
+				<div class='header'>
+				 	
+		<!-- 		 	<img src="assets/images/millionare_logo.png" id="logo"> -->
+					<img src="assets/images/5050.png" class="help" id="5050">
+					<img src="assets/images/friend.png"  class="help" id="friend">
+					<img src="assets/images/audience.png" class="help" id="audience">
+				</div>
+
+				<div class='row'>
+					<div id='question'></div>
+				</div>
+				<div class='row'>		
+				
+						<button type='button' class='answer' class = 'col-6' id='answerA'></button>
+						<button type='button' class='answer' class = 'col-6' id='answerB'></button>
+					
+				</div>
+				<div class='row'>
+					
+						<button type='button' class='answer' class = 'col-6' id='answerC'></button>
+						<button type='button' class='answer' class = 'col-6' id='answerD'></button>
+					
+				</div>
+				
+			</div>
+			<div class='right-container'>
+				<button id="myBtn">Instructions</button><br>
+				<button type='button' id='start-button'>Start</button>
 				<div id='game-timer'>:00</div>
-				<div id='money'>$0</div>
+				<div class='money-bar' id='money01'>$0</div>
+				<div class='money-bar' id='money02'>$1,000</div>
+				<div class='money-bar' id='money03'>$5,000</div>
+				<div class='money-bar' id='money04'>$10,000</div>
+				<div class='money-bar' id='money05'>$32,000</div>
+				<div class='money-bar' id='money06'>$64,000</div>
+				<div class='money-bar' id='money07'>$125,000</div>
+				<div class='money-bar' id='money08'>$250,000</div>
+				<div class='money-bar' id='money09'>$500,000</div>
+				<div class='money-bar' id='money10'>$1,000,000</div>
 			</div>
 
-			<div class='row'>
-				<div id='question'></div>
-			</div>
-			<div class='row'>		
-			
-					<button type='button' class='answer' class = 'col-6' id='answerA'>A:</button>
-					<button type='button' class='answer' class = 'col-6' id='answerB'>B:</button>
-				
-			</div>
-			<div class='row'>
-				
-					<button type='button' class='answer' class = 'col-6' id='answerC'>B:</button>
-					<button type='button' class='answer' class = 'col-6' id='answerD'>C:</button>
-				
-			</div>
-			<button type='button' id='start-button'>start</button>
+			<div class='message'></div>
+
 
 		</div>
 
 		<!-- Trigger/Open The Modal -->
-<button id="myBtn">Instructions</button>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close">;</span>
     <h3>How to Play:</h3>
     <p>Press Start to begin.<p>
     <p>You are given 30 seconds per question to select the correct answer.</p>
     <p>Answer enough correct, and you will become a millionaire!</p>
-    <p>Answer any incorrectly and you lose all the money you've earned</p>
+    <p>Answer any incorrectly and you lose all the money you've earned.</p>
     <h3>Lifelines</h3>
-    <p>50:50 - two of the incorrect answers will be revealed</p>
-    <p>Call a friend - Call somebody for help!</p>
-    <p>Ask The Audience - The audience will vote for which answer they believe is right</p>
+    <p>50:50 - Wwo of the incorrect answers will be revealed</p>
+    <p>Call a Friend - Call somebody for help!</p>
+    <p>Ask the Audience - The audience will vote for which answer they believe is right.</p>
   </div>
 
 </div>

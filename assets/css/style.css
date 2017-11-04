@@ -21,13 +21,13 @@
 
 body {
 	background-image: url("../../assets/images/background_image.jpg");
-	width: 1600px;
+	width: 1400px;
 	height: auto;
 	z-index: -98;
 }
 
 .main-container{
-	width: 1200px;
+	width: 1400px;
 	max-width: 1200px;
 	margin: 0 auto;
 	clear: both;
@@ -35,8 +35,8 @@ body {
 
 
 .row {
-	width: 1200px;
-	max-width: 1200px;
+	width: 900px;
+	max-width: 900px;
 /*	height: 300px;*/
 	margin: 0 auto;
 	clear: both;
@@ -48,43 +48,82 @@ body {
 #game-timer{
 	width: 100px;
 	height: 40px;
-	size: 20px;
+	font-size: 30px;
 	color: white;
-	background-color: purple;
-	border: 4px solid white;
+	background-color: #4a65b5;
+	border: 4px solid #1e3a87;
+	text-align: right;
+
+
 }
 
-#money {
-	width: 100px;
+.left-container{
+	width: 900px;
+	float: left;
+}
+.right-container{
+	margin-top: 10px;
+	width: 300px;
+	float: right;
+}
+
+#myBtn, #start-button{
+	margin: 10px 0px 10px 0px;
+	width: 180px;
 	height: 40px;
-	size: 20px;
+	background-color: #4a65b5;
+	border: #1e3a87 solid 3px;
+	font-size: 16px;
 	color: white;
-	background-color: purple;
-	border: 4px solid white;
+}
+#game-timer{
+	width: 100px;
+	margin: 30px 40px 60px 40px;
+	height: 70px;
+	font-size: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+
+.money-bar{
+	background-color: #4a65b5;
+	border: #1e3a87 solid 3px;
+	color: white;
+	font-size: 30px;
+	width:180px;
+	height: 40px;
+	text-align: right;
+}
+.current-money{
+	background-color: #4a65b5;
+	border-color: gold;
 }
 
 #question{
-	border: 4px solid white;
-	background-color: purple;
+	border: 4px solid #1e3a87;
+	background-color: #4a65b5;
 	color: white;
-	font-size: 18px;
+	font-size: 23px;
 	width: 825px;
 	height: 100px;
 	border-radius: 50px 50px 50px 50px;
+	line-height: 80px;
+ 	white-space: initial;
 }
 
 .answer {
-	border: 4px solid white;
+	border: 4px solid #1e3a87;
 	color: white;
 	font-size: 18px;
 	width: 400px;
 	height: 100px;
 	display: inline;
-	background-color: purple;
+	background-color: #4a65b5;
 }
 
 .answer:hover {
-	background-color: blue;
+	background-color: #4a65b5;
 }
 
 #answerA{
@@ -106,16 +145,29 @@ body {
 
 .disabled {
 	background-color: grey;
+	opacity: .3;
 }
 
 .header{
 	height: 300px;
-	width: 1000px;
+	width: 400px;
 	margin: 0 auto;
 	clear: both;
 	text-align: center
 	justify-content: center;
 	margin-bottom: 30px;
+}
+
+.message{
+	width: 824px;
+	height: 80px;
+	background-color: grey;
+	font-size: 30px;
+	text-align: center;
+	clear: both;
+	border: #1e3a87 solid 4px;
+	line-height: 70px
+
 }
 
 .col-1 {width: 8.33%;}
@@ -151,8 +203,8 @@ body {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border: 4px solid white;
+    width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
@@ -161,6 +213,7 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    font-family: Helvetica;
 }
 
 .close:hover,
