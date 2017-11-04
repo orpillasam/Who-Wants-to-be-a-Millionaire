@@ -75,10 +75,86 @@ $(document).ready(function() {
 			question: "What is the fear of houses?",
 			answers: ["A: Rhabdophobia", "B: Neophobia", "C: Oikophobia", "D: Jedeophobia"],
 			correctAnswer: 2
+		},
+		question16= {
+			question: "In 1900 in the U.S. what were the most popular first names for boy and girl babies?",
+			answers: ["A: William and Elizabeth", "B: Joseph and Catherine", "C: John and Mary", "D: George and Anne"],
+			correctAnswer: 2
+		},
+		question17= {
+			question: "When did the Liberty Bell get its name?",
+			answers: ["A: When it was made, in 1701", "B: When it rang on July 4, 1776", "C: In the 19th century, when slavery was abolished", "D: 2011"],
+			correctAnswer: 2
+		},
+		question18= {
+			question: "Daniel Boon museum at the home where he died can best be described how??",
+			answers: ["A: Log cabin in Kentucky", "B: Two-story clapboard house in Tennessee", "C: Four-story Georgian-style home in Missouri", "D: Three story brick house in Arkansas"],
+			correctAnswer: 2
+		},
+		question19= {
+			question: "Which of the following items was owned by the fewest U.S. homes in 1990??",
+			answers: ["A: Home Computer", "B: Compact disk player", "C: Cordless phone", "D: Dishwasher"],
+			correctAnswer: 1
+		},
+		question20= {
+			question: "Who holds the record for the most victories in a row on the professional golf tour?",
+			answers: ["A: Jack Nicklaus", "B: Arnold Palmer", "C: Byron Nelson", "D: Ben Hogan"],
+			correctAnswer: 2
+		},
+		question21= {
+			question: "In 1990, in what percentage of U.S. married couples did the wife earn more money than the husband?",
+			answers: ["A: 18", "B: 8", "C: 38", "D: 58"],
+			correctAnswer: 0
+		
+		// question22= {
+		// 	question: "What is the fear of houses?",
+		// 	answers: ["A: Rhabdophobia", "B: Neophobia", "C: Oikophobia", "D: Jedeophobia"],
+		// 	correctAnswer: 2
+		// },
+		// question23= {
+		// 	question: "When glass breaks, the cracks move up to how many mph?",
+		// 	answers: ["A: 5,000", "B: 1,000", "C: 3,000", "D: 10,000"],
+		// 	correctAnswer: 2
+		// },
+		// question24= {
+		// 	question: "When glass breaks, the cracks move up to how many mph?",
+		// 	answers: ["A: 5,000", "B: 1,000", "C: 3,000", "D: 10,000"],
+		// 	correctAnswer: 2
+		// },
+		// question25= {
+		// 	question: "The NY phone book had 22 Hitlers before WWII. How many did it have in 2000?",
+		// 	answers: ["A: 4", "B: 13", "C: 11", "D: 0"],
+		// 	correctAnswer: 3
+		// },
+		// question26= {
+		// 	question: "What percentage of Japanese citizens are cremated?",
+		// 	answers: ["A: 98", "B: 75", "C: 26", "D: 11"],
+		// 	correctAnswer: 0
+		// },
+		// question27= {
+		// 	question: "In what key do most American car-horns honk?",
+		// 	answers: ["A: C", "B: F", "C: E", "D: G"],
+		// 	correctAnswer: 1
+		// },
+		// question28= {
+		// 	question: "What is the fear of houses?",
+		// 	answers: ["A: Rhabdophobia", "B: Neophobia", "C: Oikophobia", "D: Jedeophobia"],
+		// 	correctAnswer: 2
+		// },
+		// question29= {
+		// 	question: "In what key do most American car-horns honk?",
+		// 	answers: ["A: C", "B: F", "C: E", "D: G"],
+		// 	correctAnswer: 1
+		// },
+		// question30= {
+		// 	question: "What is the fear of houses?",
+		// 	answers: ["A: Rhabdophobia", "B: Neophobia", "C: Oikophobia", "D: Jedeophobia"],
+		// 	correctAnswer: 2
 		}];
-	var audienceAnswers = ['A: 64%  B:  17%  C: 9%  D: 10%', 'A: 24%  B:  26%  C: 27%  D: 23%', 'A: 14%  B:  2%  C: 12%  D: 49%', 'A: 17%  B: 16%  C: 43%  D: 34%', 'A: 34%  B:  45%  C: 22%  D: 9%' ]
-	var phoneAnswers = ['Sup dude. Uh, the answer is A. I mean B.', "Hello Dear, I don't understand the question. Sorry.", "How long do I have to tell you an answer? I know this one. It's...", 'I know this one. It is D.',  "I'm just guessing, but I think it's C"]
+	var audienceAnswers = ['A: 64%  B:  17%  C: 9%  D: 10%', 'A: 24%  B:  26%  C: 27%  D: 23%', 'A: 14%  B:  2%  C: 49%  D: 12%', 'A: 17%  B: 16%  C: 34%  D: 43%']
+	var phoneAnswers = ['Sup dude. Uh, the answer is A. I mean ', "Hello Dear, I don't understand the question. But I think it's ", "How long do I have to tell you an answer? It's... ", 'I know this one. It is ',  "I'm just guessing, but I think it's "]
 	var questionValue = [100, 1000, 5000, 10000, 32000, 64000, 125000, 250000, 500000, 1000000]
+	var lettersKey = ['A','B','C','D'];
 	var timer = 20;
 	var gameStart = false;
 	var difficulty = 1;
@@ -436,7 +512,7 @@ $(document).ready(function() {
 
 	function randomPhoneAnswerGenerator(){
 		var randomphoneAnswer = phoneAnswers[Math.floor(Math.random() * phoneAnswers.length)];
-		$('.message').text(randomphoneAnswer);
+		$('.message').text(randomphoneAnswer + lettersKey[currentAnswer]);
 		}
 	
 	function phoneAFriend(){
