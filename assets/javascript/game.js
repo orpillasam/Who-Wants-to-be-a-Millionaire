@@ -76,7 +76,7 @@ $(document).ready(function() {
 			answers: ["A: Rhabdophobia", "B: Neophobia", "C: Oikophobia", "D: Jedeophobia"],
 			correctAnswer: 2
 		}];
-
+	var audienceAnswers = ['A: 64%  B:  17%  C: 9%  D: 10%', 'A: 24%  B:  26%  C: 27%  D: 23%', 'A: 14%  B:  2%  C: 12%  D: 49%', 'A: 17%  B: 16%  C: 43%  D: 34%', 'A: 34%  B:  45%  C: 22%  D: 9%' ]
 	var phoneAnswers = ['Sup dude. Uh, the answer is A. I mean B.', "Hello Dear, I don't understand the question. Sorry.", "How long do I have to tell you an answer? I know this one. It's...", 'I know this one. It is D.',  "I'm just guessing, but I think it's C"]
 	var questionValue = [100, 1000, 5000, 10000, 32000, 64000, 125000, 250000, 500000, 1000000]
 	var timer = 20;
@@ -444,7 +444,9 @@ $(document).ready(function() {
 		setTimeout(randomPhoneAnswerGenerator, 2000);
 	}
 
-	function audienceHelp(){
+	function audienceForHelp(){
+		var randomAudienceAnswer = audienceAnswers[Math.floor(Math.random() * phoneAnswers.length)];
+		$('.message').text(randomAudienceAnswer);
 
 	}
 
@@ -468,7 +470,7 @@ $(document).ready(function() {
 			selectButton.play();
 			audienceHelp = false;
 			lifelineSwitch();
-			audienceHelp();
+			audienceForHelp();
 		}else{
 			console.log("audience button doesn't work");
 		}	
