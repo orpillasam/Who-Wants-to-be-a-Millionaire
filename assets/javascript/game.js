@@ -521,8 +521,8 @@ $(document).ready(function() {
 	}
 
 	function audienceForHelp(){
-		var randomAudienceAnswer = audienceAnswers[Math.floor(Math.random() * phoneAnswers.length)];
-		$('.message').text(randomAudienceAnswer);
+		// var randomAudienceAnswer = audienceAnswers[Math.floor(Math.random() * audienceAnswers.length)];
+		$('.message').text(audienceAnswers[currentAnswer]);
 
 	}
 
